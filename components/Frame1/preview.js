@@ -10,7 +10,7 @@ import profile from "../../assets/profile_pic_shivkant.png"
 const Screen = styled.div`
   width: 100%;
   max-width:100%;
-  height: 100%;
+  height: fit-content;
   background: ${({ theme }) => theme.color};
   display: flex;
   flex-direction:column;
@@ -25,9 +25,9 @@ const Preview = () => {
   const { theme } = useTheme();
 
   return (
-    <Screen>
-      <div className="w-full border-slate-400 border-2 p-2 rounded-md" >
-        <div className="relative border-dashed p-1 border-2 border-red-300 rounded-md">
+    <Screen className="h-1/2 sm:h-full">
+      <div className="w-full border-slate-400 border-2 p-0 sm:p-2 rounded-md" >
+        <div className="relative border-dashed p-0 sm:p-1 border-2 border-red-300 rounded-md">
           <Image
             src={profileImage}
             alt="Background Image"

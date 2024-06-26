@@ -7,12 +7,14 @@ export default function Home() {
     <>
       {/* <Frame1/> */}
       {/* <Frame2/> */}
-      <a href="/frame1">
-        <Button>Frame1</Button>
-      </a>
-      <a href="/frame2">
-        <Button>frame2</Button>
-      </a>
+      <div className="w-full h-screen flex justify-center items-center gap-20">
+        <a href="/frame1">
+          <Button>Frame1</Button>
+        </a>
+        <a href="/frame2">
+          <Button>frame2</Button>
+        </a>
+      </div>
     </>
   );
 }

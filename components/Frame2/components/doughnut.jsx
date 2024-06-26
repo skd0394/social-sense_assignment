@@ -96,10 +96,10 @@ const DonutChart = () => {
   };
 
   return (
-    <div className="w-4/5 h-fit bg-white rounded-2xl shadow-lg grid">
-      <Doughnut data={data} options={options} width={"80%"} height={"100%"} />
+    <div className="w-full sm:w-4/5 h-100% bg-white rounded-3xl shadow-lg grid px-8 py-2">
+      <Doughnut data={data} options={options} />
       <Button
-        className="mt-5 w-1/5 mx-auto bg-yellow-200 text-yellow-700"
+        className="w-1/3 mx-auto bg-yellow-200 text-yellow-700 font-semibold py-2 px-4 rounded text-xs md:text-sm lg:text-base whitespace-nowrap overflow-hidden overflow-ellipsis"
         onClick={handleUpdate}
       >
         Update Data

@@ -46,22 +46,22 @@ const Overview = () => {
     datasets: [
       {
         label: "Projections",
-        data: generateRandomData(20, 10),
-        backgroundColor: "rgba(75, 192, 192, 0.5)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        data: [35, 40, 45, 30, 35, 40, 45, 40, 35, 40, 45, 30],
+        backgroundColor: "#eab308",
+        borderColor: "#eab308",
         borderWidth: 1,
       },
       {
         label: "Actuals",
-        data: generateRandomData(30, 10),
-        backgroundColor: "rgba(255, 205, 86, 0.5)",
-        borderColor: "rgba(255, 205, 86, 1)",
+        data: [30, 35, 40, 25, 30, 35, 40, 35, 30, 35, 40, 25],
+        backgroundColor: "#e2e8f0",
+        borderColor: "#e2e8f0",
         borderWidth: 1,
       },
     ],
   });
 
-  const handleUpdate = () => {
+  const handleChange = () => {
     setData({
       labels: [
         "Jan",
@@ -80,16 +80,16 @@ const Overview = () => {
       datasets: [
         {
           label: "Projections",
-          data: generateRandomData(20, 10),
-          backgroundColor: "rgba(75, 192, 192, 0.5)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          data: generateRandomData(50, 50),
+          backgroundColor: "#eab308",
+          borderColor: "#eab308",
           borderWidth: 1,
         },
         {
           label: "Actuals",
-          data: generateRandomData(30, 10),
-          backgroundColor: "rgba(255, 205, 86, 0.5)",
-          borderColor: "rgba(255, 205, 86, 1)",
+          data: generateRandomData(50, 50),
+          backgroundColor: "#e2e8f0",
+          borderColor: "#e2e8f0",
           borderWidth: 1,
         },
       ],
@@ -118,14 +118,14 @@ const Overview = () => {
   };
 
   return (
-    <div className="w-[80%] shadow-lg bg-white rounded-2xl p-3 grid">
-      <Bar className="border-ye" data={data} options={options} />
+    <div className="w-full sm:w-[90%] h-full shadow-lg bg-white rounded-2xl p-3 grid">
+      <Bar data={data} options={options} />
       <Button
-        className="mt-5 w-1/5 mx-auto bg-yellow-200 text-yellow-700"
-        onClick={handleUpdate}
+        className="w-1/3 mx-auto bg-yellow-200 text-yellow-700 font-semibold py-2 px-4 rounded text-xs md:text-sm lg:text-base whitespace-nowrap overflow-hidden overflow-ellipsis"
+        onClick={handleChange}
       >
         Update Data
-      </Button>
+      </Button>{" "}
     </div>
   );
 };
